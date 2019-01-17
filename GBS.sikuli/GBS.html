@@ -1,0 +1,120 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>GBS.sikuli</h2> <a href="GBS.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="cmt">#Created by: Ashton VonBergen</span>
+
+<span class="cmt">#Check for existing Windows File Explorer window</span>
+<span class="kw">if</span>(exists(<img src="1545071809294.png" />)):
+    <span class="skw">click</span>(<img src="1545071809294.png" />)
+    <span class="skw">wait</span>(<span class="dig">5</span>)
+
+<span class="cmt">#Check for existing Chrome window</span>
+<span class="kw">if</span>(exists(<img src="1540486053638.png" />)):
+    <span class="skw">click</span>(<img src="1540486053638.png" />)
+    <span class="skw">wait</span>(<span class="dig">5</span>)
+
+<span class="cmt">#Main body of script</span>
+<span class="kw">if</span>(exists(<img src="1528366069988.png" />)): <span class="cmt">#Check for icon, exits script if it does not exist</span>
+    <span class="skw">wait</span>(<span class="dig">5</span>)
+    <span class="skw">doubleClick</span>(<img src="1528366069988.png" />)
+    <span class="skw">wait</span>(<span class="dig">10</span>)
+    <span class="skw">type</span>(<img src="1540495355439.png" />, <span class="str">"https://cis.cernerworkswan.com/Citrix/greaseboardWeb/"</span> + Key.ENTER)
+    <span class="skw">wait</span>(<span class="dig">5</span>)
+    <span class="skw">type</span>(<img src="1528366085495.png" />, <span class="str">"tbclsdcsdcgb2"</span>)
+    <span class="skw">wait</span>(<span class="dig">1</span>)
+    <span class="skw">type</span>(<img src="1528366095431.png" />, <span class="str">"M0ntana2"</span>)
+    <span class="skw">wait</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1528366283674.png" />)
+    <span class="skw">wait</span>(<span class="dig">10</span>)
+    <span class="skw">click</span>(<img src="1528366312619.png" />) <span class="cmt">#Select Firstnet Greaseboard application</span>
+    <span class="skw">wait</span>(<span class="dig">30</span>)
+    <span class="kw">if</span>(exists(<img src="1538666054667.png" />)): <span class="cmt">#Check for Permissions Dialog Box, exits statment if it does not exist</span>
+        <span class="skw">click</span>(<img src="1538666065521.png" />)
+        <span class="skw">click</span>(<img src="1538666074201.png" />)
+    <span class="skw">wait</span>(<span class="dig">10</span>)
+    <span class="skw">click</span>(<img src="1540486053638.png" />) <span class="cmt">#Closes Chrome window in case Firstnet board times out</span>
+    <span class="skw">wait</span>(<span class="dig">5</span>)
+    <span class="skw">click</span>(<img src="1538666247071.png" />) <span class="cmt">#Select Cerner Citrix login from taskbar</span>
+    <span class="skw">wait</span>(<span class="dig">3</span>)
+    <span class="skw">type</span>(<img src="1528428987074.png" />, <span class="str">"tbclsdcsdcgb2"</span>)
+    <span class="skw">wait</span>(<span class="dig">1</span>)
+    <span class="skw">type</span>(<img src="1528366384081.png" />, <span class="str">"Tr@ck1ngB0@rd"</span>)
+    <span class="skw">wait</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1528366404282.png" />)
+    <span class="skw">wait</span>(<span class="dig">15</span>)
+    <span class="skw">click</span>(<img src="1528367433871.png" />)
+    <span class="skw">wait</span>(<span class="dig">1</span>)
+    <span class="skw">type</span>(<span class="str">"b"</span>)
+    <span class="skw">wait</span>(<span class="dig">1</span>)
+</pre>
+</body>
+</html>
